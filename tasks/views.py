@@ -24,4 +24,4 @@ def complete_task(request, task_id):
     task = Task.objects.get(id=task_id)
     task.done = True
     task.save()
-    return JsonResponse({"id": task.id, "title": task.title, "done": task.done})
+    return JsonResponse({"id": task.id, "title": task.title, "done": task.done, "message": "Task created successfully"})
